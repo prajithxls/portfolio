@@ -1,37 +1,38 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import GlowOverlay from './components/GlowOverlay';
 import StarsBackground from './components/StarsBackground';
 import ClickParticles from './components/ClickParticles';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Skills from './pages/Skills';
-import Contact from './pages/Contact';
+import LightGradient from './components/LightGradient'; // optional
+
+import Home from './sections/Home';
+import About from './sections/About';
+import Projects from './sections/Projects';
+import Skills from './sections/Skills';
+import Contact from './sections/Contact';
 
 function App() {
   return (
-    <Router>
+    <>
       <GlowOverlay />
       <StarsBackground />
       <ClickParticles />
+      {/* <LightGradient /> if you want extra gradient */}
 
       <div className="relative z-10">
         <Navbar />
-        <main className="pt-20 px-6 min-h-screen">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+        <main className="pt-20 scroll-smooth">
+          <Home />
+          <About />
+          <Projects />
+          <Skills />
+          <Contact />
         </main>
         <Footer />
       </div>
-    </Router>
+    </>
   );
 }
 
 export default App;
+  

@@ -9,6 +9,7 @@ module.exports = {
   backdropBlur: {
     xs: '2px',
   },
+  
 }
 
   },
@@ -20,6 +21,18 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+    },
+  },
+  plugins: [],
+};
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        orbitron: ['Orbitron', 'sans-serif'],
       },
     },
   },
