@@ -1,6 +1,7 @@
 const Contact = () => (
-  <div className="p-4 text-white">
-    <h1 className="text-4xl font-bold">Contact</h1>
+  <div className="text-white text-center">
+    <h1 className="text-4xl font-bold mb-4">Contact Me</h1>
+    <p>Feel free to reach out!</p>
   </div>
 );
 

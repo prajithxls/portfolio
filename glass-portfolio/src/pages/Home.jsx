@@ -1,6 +1,7 @@
 const Home = () => (
-  <div className="p-4 text-white">
-    <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
+  <div className="text-white text-center">
+    <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+    <p>This is the home page with glassmorphic style.</p>
   </div>
 );
 

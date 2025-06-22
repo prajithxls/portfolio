@@ -1,6 +1,7 @@
 const Skills = () => (
-  <div className="p-4 text-white">
-    <h1 className="text-4xl font-bold">Skills</h1>
+  <div className="text-white text-center">
+    <h1 className="text-4xl font-bold mb-4">Skills</h1>
+    <p>Technologies and tools listed here.</p>
   </div>
 );
 

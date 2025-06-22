@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => (
-  <nav className="backdrop-blur-md bg-white/10 p-4 flex justify-around fixed w-full z-50 text-white">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/projects">Projects</a>
-    <a href="/skills">Skills</a>
-    <a href="/contact">Contact</a>
+  <nav className="fixed w-full z-50 flex justify-around backdrop-blur-md bg-glass text-white p-4 shadow-lg">
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
+    <Link to="/projects">Projects</Link>
+    <Link to="/skills">Skills</Link>
+    <Link to="/contact">Contact</Link>
   </nav>
 );
 

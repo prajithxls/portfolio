@@ -1,6 +1,7 @@
 const About = () => (
-  <div className="p-4 text-white">
-    <h1 className="text-4xl font-bold">About Me</h1>
+  <div className="text-white text-center">
+    <h1 className="text-4xl font-bold mb-4">About Me</h1>
+    <p>This is the about page content.</p>
   </div>
 );
 
