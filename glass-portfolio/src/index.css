@@ -3,6 +3,56 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
+}
+
+.click-ripple {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  animation: ripple-pop 0.6s ease-out;
+}
+
+@keyframes ripple-pop {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 8px 2px white;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+    box-shadow: 0 0 20px 0 transparent;
+  }
+}
+.particle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: particle-fly 0.5s ease-out forwards;
+  z-index: 1000;
+}
+
+@keyframes particle-fly {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.3);
+    opacity: 0;
+  }
 }

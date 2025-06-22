@@ -3,13 +3,25 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      colors: {
-        glass: 'rgba(255,255,255,0.1)',
-      },
-      backdropBlur: {
-        xs: '2px',
+  colors: {
+    glassDark: 'rgba(0, 0, 0, 0.3)', // for full dark glass
+  },
+  backdropBlur: {
+    xs: '2px',
+  },
+}
+
+  },
+  plugins: [],
+}
+module.exports = {
+  content: ["./src/**/*.{js,jsx}"],
+  theme: {
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
-}
+};
