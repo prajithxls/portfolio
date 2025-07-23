@@ -10,10 +10,12 @@ import About from './sections/About';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
+// import SpaceshipScroll from './components/SpaceshipScroll';
 
 function App() {
   return (
     <>
+      {/* <SpaceshipScroll /> */}
       <GlowOverlay />
       <StarsBackground />
       <ClickParticles />

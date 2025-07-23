@@ -101,12 +101,10 @@ const StarsBackground = () => {
         ctx.shadowBlur = 0;
       });
 
-      // ☄️ Draw enhanced comets with detailed structure
       comets.forEach((comet, i) => {
         const baseColor = comet.color === 'red' ? '255, 60, 60' : '255, 255, 255';
         const coreColor = comet.color === 'red' ? '255, 120, 120' : '255, 255, 255';
 
-        // Create multiple tail segments for more realistic look
         const segments = 8;
         for (let seg = 0; seg < segments; seg++) {
           const segmentRatio = seg / segments;
@@ -139,8 +137,7 @@ const StarsBackground = () => {
           ctx.stroke();
         }
 
-        // Draw bright comet core with multiple layers
-        // Outer glow
+     
         ctx.beginPath();
         ctx.fillStyle = `rgba(${baseColor}, ${comet.opacity * 0.3})`;
         ctx.shadowColor = `rgba(${baseColor}, ${comet.opacity * 0.8})`;
@@ -148,14 +145,14 @@ const StarsBackground = () => {
         ctx.arc(comet.x, comet.y, 6, 0, Math.PI * 2);
         ctx.fill();
         
-        // Middle layer
+     
         ctx.beginPath();
         ctx.fillStyle = `rgba(${coreColor}, ${comet.opacity * 0.8})`;
         ctx.shadowBlur = 15;
         ctx.arc(comet.x, comet.y, 4, 0, Math.PI * 2);
         ctx.fill();
         
-        // Inner core
+       
         ctx.beginPath();
         ctx.fillStyle = `rgba(255, 255, 255, ${comet.opacity})`;
         ctx.shadowBlur = 8;
@@ -164,7 +161,6 @@ const StarsBackground = () => {
         
         ctx.shadowBlur = 0;
 
-        // Add particle debris trail
         if (Math.random() < 0.3) {
           comet.particles.push({
             x: comet.x + (Math.random() - 0.5) * 10,
@@ -176,7 +172,6 @@ const StarsBackground = () => {
           });
         }
 
-        // Draw and update particles
         comet.particles.forEach((particle, pi) => {
           particle.x += particle.vx;
           particle.y += particle.vy;

@@ -12,6 +12,15 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
+/* Hide native scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 
 
 .click-ripple {
